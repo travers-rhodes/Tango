@@ -280,6 +280,8 @@ class TangoServer:
                               job.vm.image)
                     job.appendTrace("%s|validateJob: Image not found: %s" %
                                     (datetime.utcnow().ctime(), job.vm.image))
+                    job.appendTrace("%s|validateJob: Images available: %s" %
+                                    (datetime.utcnow().ctime(), imgList))
                     errors += 1
                 else:
                     (name, ext) = os.path.splitext(job.vm.image)
